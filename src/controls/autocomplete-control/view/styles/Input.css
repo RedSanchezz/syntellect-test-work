@@ -1,0 +1,9 @@
+
+.autocomplete-input {
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    position: relative;
+    z-index: 99;
+}
+

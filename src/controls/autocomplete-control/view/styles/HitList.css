@@ -1,0 +1,46 @@
+.hints-container {
+    position: relative;
+    z-index: 99;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.hint-list {
+    border: 1px solid black;
+    width: fit-content;
+    position: absolute;
+}
+
+.hint-list__item {
+    border: 1px solid black;
+    background: antiquewhite;
+    padding: 5px;
+    cursor: pointer;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hint-list__item:hover {
+    background: #f8efe2;
+
+}
+
+.hint-list__item-name {
+    font-size: 16px;
+}
+
+.hint-list__item-name {
+    font-size: 16px;
+}
+
+.hint-list__item-full-name {
+    font-size: 14px;
+}
+
+.hint-list__item-flag {
+
+}

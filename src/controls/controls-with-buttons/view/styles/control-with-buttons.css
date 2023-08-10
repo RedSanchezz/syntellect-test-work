@@ -1,0 +1,35 @@
+.controls-with-buttons {
+    display: flex;
+    flex-direction: row;
+    background: #8eb4de;
+    max-width: fit-content;
+    border: 1px solid black;
+    margin:  15px auto 15px auto;
+}
+
+.buttons-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    padding: 10px;
+    margin-bottom: 5px;
+    background: white;
+    border: 3px solid #362cc0;
+    border-radius: 10px;
+    color: #362cc0;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background: #d2d0f8;
+}
+
+.controls-with-buttons__text-area {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    resize: none;
+}
