@@ -7,15 +7,15 @@ interface IButton {
 }
 
 class ControlWithButtonsModel {
-    buttons: Array<IButton> = [];
-    text: string = "";
+    buttons: Array<IButton> = []
+    text: string = ""
 
     constructor() {
-        makeAutoObservable(this);
+        makeAutoObservable(this)
     }
 
     setButtons= (buttons:Array<IButton>)=>{
-        this.buttons = buttons;
+        this.buttons = buttons
     }
 
     setText = (text: string)=>{

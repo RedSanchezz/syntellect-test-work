@@ -2,23 +2,23 @@ import {makeAutoObservable} from "mobx";
 import {CountryInfo, getCountryByName} from "../../../api/apiService";
 
 export class AutocompleteControlModel {
-    isLoading: boolean = false;
-    hintsCount: number = 10;
-    text: string = '';
-    hints : Array<CountryInfo> = [];
-    lastPromiseTimestamp: string = '';
-    showHints: boolean = false;
+    isLoading: boolean = false
+    hintsCount: number = 10
+    text: string = ''
+    hints : Array<CountryInfo> = []
+    lastPromiseTimestamp: string = ''
+    showHints: boolean = false
 
     constructor() {
         makeAutoObservable(this)
     }
 
     setMaxHintCount = (hintCount: number)=>{
-        this.hintsCount = hintCount;
+        this.hintsCount = hintCount
     }
 
     setText =(text: string) => {
-        this.text = text;
+        this.text = text
     }
 
     fetchHints = async ()=> {
@@ -38,7 +38,11 @@ export class AutocompleteControlModel {
             const resp = await getCountryByName(this.text);
 
             if (this.lastPromiseTimestamp === timeStamp) {
-                this.hints = resp.slice(0, this.hintsCount)
+                //remove duplicates
+                const hintsWithoutDuplicates = Array.from(new Set(resp.map( hint => JSON.stringify(hint))))
+                    .map((hint)=>JSON.parse(hint));
+
+                this.hints = hintsWithoutDuplicates.slice(0, this.hintsCount)
             }
         } catch (err) {
             this.hints = []
