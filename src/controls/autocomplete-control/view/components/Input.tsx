@@ -1,4 +1,4 @@
-import '../styles/Input.css';
+import "../styles/Input.css";
 
 interface InputProps {
     value: string,
@@ -7,7 +7,6 @@ interface InputProps {
 }
 
 export const Input = ({value, setText, setShowHints}: InputProps) => {
-
     return <input className='autocomplete-input' value={value}
                   onChange={(e) => {setText(e.target.value)}}
                   onFocus={(e)=>setShowHints(true)}

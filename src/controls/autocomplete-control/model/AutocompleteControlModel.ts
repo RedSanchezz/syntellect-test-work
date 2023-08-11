@@ -1,5 +1,5 @@
-import {makeAutoObservable} from "mobx";
-import {CountryInfo, getCountryByName} from "../../../api/apiService";
+import {makeAutoObservable} from "mobx"
+import {CountryInfo, getCountryByName} from "../../../api/apiService"
 
 export class AutocompleteControlModel {
     isLoading: boolean = false
@@ -52,7 +52,7 @@ export class AutocompleteControlModel {
     }
 
     setShowHints = (showHints: boolean)=> {
-        this.showHints = showHints;
+        this.showHints = showHints
     }
 }
 

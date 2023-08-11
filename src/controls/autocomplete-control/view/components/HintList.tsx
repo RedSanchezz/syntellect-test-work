@@ -1,5 +1,5 @@
-import '../styles/HitList.css'
-import {CountryInfo} from "../../../../api/apiService";
+import "../styles/HitList.css"
+import {CountryInfo} from "../../../../api/apiService"
 
 interface HintListProps {
     hints: Array<CountryInfo>
@@ -10,7 +10,6 @@ interface HintListProps {
 }
 
 const HintList = ({ hints, setText, isLoading, showHints, setShowHints } :HintListProps)=> {
-
     let containerClasses = showHints ? 'hints-container' : 'hints-container hide'
 
     return <div className={containerClasses}>

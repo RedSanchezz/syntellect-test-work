@@ -1,4 +1,4 @@
-import '../styles/control-with-buttons.css'
+import "../styles/control-with-buttons.css"
 
 interface TextAreaProps {
     onChange: (text: string)=>void

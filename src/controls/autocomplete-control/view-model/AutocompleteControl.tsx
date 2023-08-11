@@ -1,8 +1,8 @@
-import {observer} from "mobx-react-lite";
-import {useEffect, useState} from "react";
-import {AutocompleteControlModel} from "../model/AutocompleteControlModel";
-import {HintList} from "../view/components/HintList";
-import {Input} from "../view/components/Input";
+import {observer} from "mobx-react-lite"
+import {useEffect, useState} from "react"
+import {AutocompleteControlModel} from "../model/AutocompleteControlModel"
+import {HintList} from "../view/components/HintList"
+import {Input} from "../view/components/Input"
 
 interface AutocompleteControlComponentProps {
     maxHintCount: number
@@ -31,5 +31,5 @@ const AutocompleteControlComponent = ({ maxHintCount }: AutocompleteControlCompo
     </div>
 }
 
-const AutocompleteControl = observer(AutocompleteControlComponent);
+const AutocompleteControl = observer(AutocompleteControlComponent)
 export {AutocompleteControl}

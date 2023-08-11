@@ -15,8 +15,8 @@ const ControlWithButtonsComponent = ({ buttons: buttonsInProps }: ControlWithBut
         setButtons(buttonsInProps)
     }, [buttonsInProps, setButtons])
 
-    const rightButtons = buttons.filter((button)=> button.position === 'right')
-    const leftButtons = buttons.filter((button)=> button.position === 'left')
+    const rightButtons = buttons.filter((button)=> button.position === "right")
+    const leftButtons = buttons.filter((button)=> button.position === "left")
 
     return <div className='controls-with-buttons'>
         <ButtonsContainer buttons={leftButtons} setText={setText} text={text}/>
