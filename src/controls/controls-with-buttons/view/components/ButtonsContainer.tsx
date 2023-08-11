@@ -8,8 +8,8 @@ interface ButtonsContainerProps {
 
 export const ButtonsContainer = ({buttons, setText, text}: ButtonsContainerProps)=>{
     return <div className='buttons-container'>
-        {buttons.map((button)=>
-            <button className='buttons'
+        {buttons.map((button, index)=>
+            <button className='buttons' key={index}
                     onClick={()=>{button.action(text, setText)}}>
                 {button.text}
             </button>)}

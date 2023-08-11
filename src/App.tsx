@@ -1,18 +1,49 @@
-import React, {useState} from "react";
-import {Exercise1} from "./components/Exercise1";
-import {Exercise2} from "./components/Exercise2";
+import React from "react";
+
 import "./App.css";
+import {AutocompleteControl, ControlWithButtons} from "./controls";
 
 function App() {
-    const [exerciseNumber, setExerciseNumber] = useState<1 | 2>(2);
-
     return <div>
-        <div className="tabs">
-            <button className="tabs-button" onClick={()=> {setExerciseNumber(1)}}>Exercise1</button>
-            <button className="tabs-button" onClick={()=> {setExerciseNumber(2)}}>Exercise2</button>
+        <div style={{display: 'flex', flexDirection: 'row'}}>
+            <ControlWithButtons buttons={[
+                {
+                    text: 'Очистить текст',
+                    position: 'right',
+                    action: (text, setText) => {
+                        setText('')
+                    }
+                },
+                {
+                    text: 'Hello world!',
+                    position: 'right',
+                    action: (text, setText) => {
+                        setText('Hello world!')
+                    }
+                }
+            ]}/>
+            <ControlWithButtons buttons={[
+                {
+                    text: 'Alert с текстом',
+                    position: 'right',
+                    action: (text) => {
+                        alert(text)
+                    }
+                },
+                {
+                    text: 'Alert с числом',
+                    position: 'left',
+                    action: (text) => {
+                        if (/^\d+$/.test(text)) {
+                            alert(text)
+                        }
+                    }
+                },
+            ]}/>
         </div>
-        <div>
-            {exerciseNumber === 1 ? <Exercise1/> : <Exercise2/>}
+        <div style={{display: 'flex', flexDirection: 'row'}}>
+            <AutocompleteControl maxHintCount={3}/>
+            <AutocompleteControl maxHintCount={10}/>
         </div>
     </div>;
 }
